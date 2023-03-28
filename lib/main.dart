@@ -645,8 +645,8 @@ class ArticleListPage extends StatelessWidget {
       appBar: AppBar(
         title: Text('My Blog'),
         actions: [
-          IconButton(onPressed: () {print("YOu clicked on me");}, icon: Icon(Icons.message)),
-          IconButton(onPressed: () {print("I'm your boss");}, icon: Icon(Icons.person)),
+          IconButton(onPressed: () {}, icon: Icon(Icons.message)),
+          IconButton(onPressed: () {}, icon: Icon(Icons.person)),
         ],
       ),
       body: ListView.builder(
@@ -672,12 +672,12 @@ class ArticleListPage extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  SizedBox(height: 8.0),
+                  // SizedBox(height: 8.0),
                   Text(
-                    article['body'],
+                    article['body'].substring(0,90)+"...",
                     style: TextStyle(fontSize: 12.0),
                   ),
-                  SizedBox(height: 8.0),
+                  // SizedBox(height: 8.0),
                   Align(
                     alignment: Alignment.centerRight,
                     child: ElevatedButton(
@@ -715,14 +715,14 @@ class ArticleDetailPage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              article['title'],
-              style: TextStyle(
-                fontSize: 16.0,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            SizedBox(height: 8.0),
+            // Text(
+            //   article['title'],
+            //   style: TextStyle(
+            //     fontSize: 16.0,
+            //     fontWeight: FontWeight.bold,
+            //   ),
+            // ),
+            // SizedBox(height: 8.0),
             Text(
               article['body'],
               style: TextStyle(fontSize: 12.0),
